@@ -1,0 +1,213 @@
+// input[type=number] {
+//   //margin: 0; 
+// }
+.input {
+  // padding-left: 0;
+  // padding-right: 0;
+  box-shadow: inset 0 -1px 0 $grey-lighter;
+  transition: all 300ms;
+  border-radius: 0;
+  background-color: $light;
+
+  &.is-active,
+  &.is-focused,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2px 0 $input-focus-border-color;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      box-shadow: inset 0 -1px 0 $color;
+
+      &.is-active,
+      &.is-focused,
+      &:active,
+      &:focus {
+        box-shadow: inset 0 -2px 0 $color;
+      }
+    }
+  }
+
+  &.is-disabled,
+  &[disabled],
+  &[readonly] {
+    border-bottom: 1px dotted $grey-lighter;
+    cursor: not-allowed;
+  }
+  &::placeholder {
+    color: #7a7a7a !important;
+  }
+}
+
+.select select {
+  border-radius: 0;
+  box-shadow: inset 0 -1px 0 $grey-lighter;
+  transition: all 300ms;
+  background-color: $light;
+
+  &.is-active,
+  &.is-focused,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2px 0 $input-focus-border-color;
+  }
+}
+
+.control {
+  &.has-addons {
+    .button,
+    .input,
+    .select {
+      &:first-child,
+      &:last-child {
+        border-radius: 0;
+
+        select {
+          border-radius: 0;
+        }
+      }
+    }
+
+    .button {
+      box-shadow: none;
+    }
+  }
+  &.has-icons-left, &.has-icons-right {
+    .icon {
+      color: $grey-light !important;
+    }
+  }
+}
+
+/**
+ * Custom effects
+ */
+.is-shady {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19) !important;
+
+  &:hover {
+      box-shadow: 0 4px 18px 6px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19) !important;
+  }
+}
+
+.is-goingUp {
+  top: 0;
+  transition: top .4s ease;
+
+  &:hover {
+      top: -10px;
+  }
+}
+
+.is-all-grey {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #79797938;
+  z-index: 5;
+}
+
+.hero {
+  //min-height: 50vh;
+}
+
+.ellipses {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-mt-1 {
+  margin-top: 1rem;
+}
+.is-mb-1 {
+  margin-bottom: 1rem;
+}
+.is-pt-1 {
+  padding-top: 1rem;
+}
+.is-pb-1 {
+  padding-bottom: 1rem;
+}
+.is-py-1 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.is-underline {
+  text-decoration: underline;
+}
+
+.is-mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.is-mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.is-my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+.flex-grow-0 {
+  flex-grow: 0;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.card {
+  margin: 10px 0px;
+}
+
+.modal {
+  z-index: 1000;
+  position: fixed;
+  overflow: hidden;
+
+  .modal-background {
+     position: fixed;
+     overflow: hidden;
+  }
+
+  .modal-content, .animation-content {
+    overflow: visible !important;
+    .modal-card {
+      border-radius: 7px !important;
+      border: 2px solid $background;
+      margin: 0 auto;
+      overflow: visible;
+
+      .modal-card-body {
+        overflow: visible;
+      }
+    }
+  }
+}
+
+.button {
+  z-index: 10;
+}
+.button.is-rounded {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+::selection {
+  background-color: $green;
+  color: white;
+}

@@ -1,0 +1,100 @@
+/************************************
+ *             THEME                *
+ ************************************/
+ @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+$family-sans-serif: 'Lexend Deca', 'Avenir', Helvetica, Arial, sans-serif;
+$family-primary: $family-sans-serif;
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 54px;
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px;
+// 960px container + 4rem
+$desktop: 960px+(2 * $gap);
+// 1152px container + 4rem
+$widescreen: 1152px+(2 * $gap);
+$widescreen-enabled: true;
+// 1344px container + 4rem
+$fullhd: 1344px+(2 * $gap);
+$fullhd-enabled: false;
+
+// Set your colors
+$primary: #3b75e0;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+$green: #227C49;
+$green-invert: findColorInvert($green);
+$yellow: #cabd00;
+$yellow-invert: findColorInvert($yellow);
+$light-gray: #f5f5f5;
+
+
+$background-gray: #f5f5f5;
+$text-gray: #969696;
+
+:root {
+    --green: #227C49;
+}
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert),
+    "green": ($green, $green-invert),
+    "yellow": ($yellow, $yellow-invert),
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$body-size: 15px;
+
+$radius: 0;
+$radius-small: 0;
+$radius-large: 0;
+
+$button-hover-color: $grey-darker;
+$button-focus: $black-ter;
+$button-active-color: $black-ter;
+
+$hr-background-color: $grey;
+$hr-margin: 10px 0;
+
+$navbar-height: 4rem;
+$navbar-z-index: 50;
+
+$aside-width: 250px;
+
+$modal-background-background-color: rgba($black, 0.86);
+$modal-card-head-background-color: $white;
+$modal-card-body-background-color: $white;
+$modal-card-foot-border-top: none;
+$modal-card-head-border-bottom: none;
+$modal-content-width: 700px;
+
+$footer-background-color: $white;
+
+$input-disabled-background-color: transparent;
+
+// media queries
+$mq-portrait: "(orientation: portrait)";
+$mq-landscape: "(orientation: landscape)";
+$mq-landscape-mobile: "(orientation: landscape) and (max-width: 450px)";
+$mq-portrait-mobile: "(orientation: portrait) and (max-width: 450px)";
+$mq-tiny-mobile: "(max-width: 450px) and (max-height: 600px)";
+$mq-medium-mobile: "(max-width: 450px) and (min-height: 600px) and (max-height: 740px)";
+$mq-large-mobile: "(max-width: 450px) and (min-height: 740px) and (max-height: 1000px)";
+$mq-xlarge-mobile: "(min-width: 450px) and (max-width: 900px) and (min-height: 1000px)";
+$mq-mobile-tablet: "(max-width: 769px)";
